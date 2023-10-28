@@ -79,14 +79,6 @@ const styles = StyleSheet.create({
   textRejectEmail: {
     color: '#000000',
   },
-  modalOverlay: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-  },
 });
 
 export default SendPasswordScreen;
