@@ -8,12 +8,12 @@ import Button from '../components/Button';
 import ModalWithFade from '../components/ModalWithFade';
 import InfoBage from '../components/InfoBage';
 
-export type DriverInfoScreenProps = NativeStackScreenProps<
+export type SendPasswordScreenProps = NativeStackScreenProps<
   RootStackParamList,
   Screens.sendPassword
 >;
 
-const SendPasswordScreen: React.FC<DriverInfoScreenProps> = ({route}) => {
+const SendPasswordScreen: React.FC<SendPasswordScreenProps> = ({route}) => {
   const {fpsr} = route.params;
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const showModal = () => setIsModalOpen(true);

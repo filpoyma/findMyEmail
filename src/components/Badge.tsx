@@ -3,11 +3,11 @@ import {StyleSheet, View} from 'react-native';
 
 import {IBadgePrpos} from './interfaces';
 
-const Badge = ({
+const Badge: React.FC<IBadgePrpos> = ({
   badgeSize = 10,
   iconSize,
   bgColor = '#FF8E75',
-}: IBadgePrpos) => {
+}) => {
   return <View style={styles(badgeSize, iconSize, bgColor).container} />;
 };
 

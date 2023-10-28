@@ -4,12 +4,12 @@ import {Pressable, StyleSheet, View} from 'react-native';
 import Icons from '../asset/images/svg';
 import {IIconProps} from './interfaces';
 
-const IconSquare = ({
+const IconSquare: React.FC<IIconProps> = ({
   name,
   size = 50,
   bgColor = '#FFFFFF',
   onPress,
-}: IIconProps) => {
+}) => {
   const SelectedIcon = Icons[name];
   return (
     <Pressable onPress={onPress}>

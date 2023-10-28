@@ -3,13 +3,13 @@ import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 import {IButtonProps} from './interfaces';
 
-const Button = ({
+const Button: React.FC<IButtonProps> = ({
   onPress,
   title = 'Button',
   style = {},
   textStyle = {},
   disabled = false,
-}: IButtonProps) => {
+}) => {
   return (
     <TouchableOpacity
       onPress={onPress}

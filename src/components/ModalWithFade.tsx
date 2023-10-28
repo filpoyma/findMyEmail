@@ -3,7 +3,11 @@ import {Modal, View, TouchableWithoutFeedback, StyleSheet} from 'react-native';
 
 import {IModalBageProps} from './interfaces';
 
-const ModalWithFade = ({isModalOpen, hideModal, children}: IModalBageProps) => {
+const ModalWithFade: React.FC<IModalBageProps> = ({
+  isModalOpen,
+  hideModal,
+  children,
+}) => {
   return (
     <>
       <Modal visible={isModalOpen} transparent={true} animationType={'fade'}>

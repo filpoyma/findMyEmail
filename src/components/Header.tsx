@@ -5,7 +5,7 @@ import {StackHeaderProps} from '@react-navigation/stack';
 import IconSqare from './IconSqare';
 import NotificationIcon from './NotificationIcon';
 
-const Header = ({back, navigation}: StackHeaderProps) => {
+const Header: React.FC<StackHeaderProps> = ({back, navigation}) => {
   return (
     <View style={styles.container}>
       <IconSqare
