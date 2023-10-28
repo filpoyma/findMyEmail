@@ -1,2 +1,3 @@
-<img width="374" alt="Screenshot 2023-10-08 at 23 29 02" src="https://github.com/filpoyma/f1riders/assets/34694422/2ff47474-959b-4b5f-b2f2-85cb09cac6ab">
-<img width="363" alt="Screenshot 2023-10-08 at 23 30 56" src="https://github.com/filpoyma/f1riders/assets/34694422/de49e63a-ed75-449f-ae0f-f704b9b0e3c4">
+
+<img width="391" alt="Screenshot 2023-10-28 at 12 53 22" src="https://github.com/filpoyma/findMyEmail/assets/34694422/4261fa11-8522-45a9-9d29-f4e9058353ce">
+<img width="397" alt="Screenshot 2023-10-28 at 12 53 42" src="https://github.com/filpoyma/findMyEmail/assets/34694422/d6287ead-6a50-4a9a-bbc0-dcb454b20d41">
