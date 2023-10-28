@@ -16,16 +16,12 @@ export const Navigator = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        // headerTitleStyle: {display: 'none'},
         header: Header,
       }}>
       <Stack.Screen name={Screens.getPassword} component={GetPasswordScreen} />
       <Stack.Screen
         name={Screens.sendPassword}
         component={SendPasswordScreen}
-        options={{
-          title: 'Driver Information',
-        }}
       />
     </Stack.Navigator>
   );
