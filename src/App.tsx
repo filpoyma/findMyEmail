@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Navigator} from './navigation/Navigator';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 const navTheme = {
   ...DefaultTheme,

@@ -1,4 +1,3 @@
-import Badge from './Badge';
 import {GestureResponderEvent, TextStyle, ViewStyle} from 'react-native';
 
 export interface INotificationIconProps {
@@ -29,5 +28,6 @@ export interface IButtonProps {
 
 export interface IModalBageProps {
   isModalOpen: boolean;
+  children?: JSX.Element;
   hideModal: () => void;
 }

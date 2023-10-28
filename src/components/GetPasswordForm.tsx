@@ -40,7 +40,7 @@ const GetPasswordForm = () => {
         <Button
           title={'Получить пароль'}
           onPress={onSubmitHandler}
-          style={{marginTop: 24}}
+          style={styles.button}
           // disabled={!fpsrNumber}
         />
       </View>
@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F6F6F6',
     marginTop: 4,
   },
+  button: {marginTop: 24},
 });
 
 export default GetPasswordForm;

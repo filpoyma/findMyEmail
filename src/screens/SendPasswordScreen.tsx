@@ -5,7 +5,8 @@ import {Screens} from '../navigation/screens';
 import {RootStackParamList} from '../navigation/Navigator';
 import UserAvatar from '../components/UserAvatar';
 import Button from '../components/Button';
-import ModalBage from '../components/ModalBage';
+import ModalWithFade from '../components/ModalWithFade';
+import InfoBage from '../components/InfoBage';
 
 export type DriverInfoScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -40,7 +41,9 @@ const SendPasswordScreen: React.FC<DriverInfoScreenProps> = ({route}) => {
           title={'Это не моя почта'}
           onPress={showModal}
         />
-        <ModalBage isModalOpen={isModalOpen} hideModal={hideModal} />
+        <ModalWithFade isModalOpen={isModalOpen} hideModal={hideModal}>
+          <InfoBage hideModal={hideModal} />
+        </ModalWithFade>
       </View>
     </View>
   );

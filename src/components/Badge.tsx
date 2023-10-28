@@ -8,7 +8,7 @@ const Badge = ({
   iconSize,
   bgColor = '#FF8E75',
 }: IBadgePrpos) => {
-  return <View style={styles(badgeSize, iconSize, bgColor).container}></View>;
+  return <View style={styles(badgeSize, iconSize, bgColor).container} />;
 };
 
 const styles = (badgeSize: number, size: number, bgColor: string) =>
