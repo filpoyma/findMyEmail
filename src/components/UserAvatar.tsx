@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UserAvatar;
+export default React.memo(UserAvatar);

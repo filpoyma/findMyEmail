@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 import {IButtonProps} from './interfaces';
-
+console.log('BTN RENDER');
 const Button: React.FC<IButtonProps> = ({
   onPress,
   title = 'Button',
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Button;
+export default React.memo(Button);

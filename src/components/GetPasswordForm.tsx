@@ -17,11 +17,11 @@ const GetPasswordForm = () => {
   const [fpsrNumber, onChangeFpsrNumber] = React.useState('');
   const navigation = useNavigation<GetPasswordFormInfoStack>();
 
-  const onSubmitHandler = () => {
+  const onSubmitHandler = React.useCallback(() => {
     navigation.navigate(Screens.sendPassword, {
       fpsr: fpsrNumber,
     });
-  };
+  }, []);
 
   return (
     <View style={styles.container}>
