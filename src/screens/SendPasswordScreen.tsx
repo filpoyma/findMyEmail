@@ -7,6 +7,7 @@ import UserAvatar from '../components/UserAvatar';
 import Button from '../components/Button';
 import ModalWithFade from '../components/ModalWithFade';
 import InfoBage from '../components/InfoBage';
+import {OverlayContext} from '../reactContext';
 
 export type SendPasswordScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -16,8 +17,16 @@ export type SendPasswordScreenProps = NativeStackScreenProps<
 const SendPasswordScreen: React.FC<SendPasswordScreenProps> = ({route}) => {
   const {fpsr} = route.params;
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const showModal = () => setIsModalOpen(true);
-  const hideModal = () => setIsModalOpen(false);
+  const overlayContext = React.useContext(OverlayContext);
+  const showModal = () => {
+    overlayContext.openOverlay();
+    setIsModalOpen(true);
+  };
+  const hideModal = () => {
+    setIsModalOpen(false);
+    overlayContext.closeOverlay();
+  };
+
   return (
     <View style={styles.container}>
       <UserAvatar title={'Личный кабинет'} />
@@ -41,6 +50,7 @@ const SendPasswordScreen: React.FC<SendPasswordScreenProps> = ({route}) => {
           title={'Это не моя почта'}
           onPress={showModal}
         />
+
         <ModalWithFade isModalOpen={isModalOpen} hideModal={hideModal}>
           <InfoBage hideModal={hideModal} />
         </ModalWithFade>

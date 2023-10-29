@@ -31,3 +31,8 @@ export interface IModalBageProps {
   children?: JSX.Element;
   hideModal: () => void;
 }
+
+export interface IOverlayDimProps {
+  isOverlayShown: boolean;
+  setShowOverlay: () => void;
+}

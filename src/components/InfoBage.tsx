@@ -1,25 +1,27 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import Button from './Button';
 
 const InfoBage = ({hideModal}: {hideModal: () => void}) => {
   return (
-    <View style={styles.modalStyle}>
-      <View style={styles.rectangle} />
-      <Text style={styles.titleStyle}>Обратитесь к менеджеру</Text>
-      <View style={styles.line} />
-      <View style={styles.content}>
-        <Text style={styles.contentText}>
-          Мы не смогли найти вашу почту. Для получения пароля обратитесь в
-          сулжбу поддержки, мы ответим быстро!
-        </Text>
-        <Button
-          style={styles.button}
-          title="Написать в поддержку"
-          onPress={hideModal}
-        />
+    <TouchableWithoutFeedback>
+      <View style={styles.modalStyle}>
+        <View style={styles.rectangle} />
+        <Text style={styles.titleStyle}>Обратитесь к менеджеру</Text>
+        <View style={styles.line} />
+        <View style={styles.content}>
+          <Text style={styles.contentText}>
+            Мы не смогли найти вашу почту. Для получения пароля обратитесь в
+            сулжбу поддержки, мы ответим быстро!
+          </Text>
+          <Button
+            style={styles.button}
+            title="Написать в поддержку"
+            onPress={hideModal}
+          />
+        </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 };
 

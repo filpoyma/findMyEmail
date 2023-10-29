@@ -10,11 +10,11 @@ const ModalWithFade: React.FC<IModalBageProps> = ({
 }) => {
   return (
     <>
-      <Modal visible={isModalOpen} transparent={true} animationType={'fade'}>
+      <Modal visible={isModalOpen} transparent={true} animationType={'slide'}>
         <TouchableWithoutFeedback onPress={hideModal}>
-          <View style={styles.modalOverlay} />
+          <View style={styles.modalContainerStyle}>{children}</View>
         </TouchableWithoutFeedback>
-        <View style={styles.modalContainerStyle}>{children}</View>
+        {/*<View style={styles.modalOverlay} />*/}
       </Modal>
     </>
   );
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
   modalContainerStyle: {
     flex: 1,
     justifyContent: 'flex-end',
+    zIndex: 2,
   },
   modalOverlay: {
     flex: 1,
@@ -33,6 +34,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     backgroundColor: 'rgba(0,0,0,0.5)',
+    zIndex: 1,
   },
 });
 
