@@ -34,5 +34,5 @@ export interface IModalBageProps {
 
 export interface IOverlayDimProps {
   isOverlayShown: boolean;
-  setShowOverlay: () => void;
+  closeOverlay: () => void;
 }

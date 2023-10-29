@@ -24,7 +24,7 @@ const App = () => {
         <View style={styles.container}>
           <OverlayDim
             isOverlayShown={isOverlayShown}
-            setShowOverlay={closeOverlay}
+            closeOverlay={closeOverlay}
           />
           <Navigator />
         </View>
