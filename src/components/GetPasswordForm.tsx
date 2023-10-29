@@ -4,7 +4,7 @@ import {useNavigation} from '@react-navigation/native';
 import {NativeStackNavigationProp} from 'react-native-screens/native-stack';
 import {RootStackParamList} from '../navigation/Navigator';
 
-import Icon from './Icon';
+import IconRound from './IconRound';
 import Button from './Button';
 import {Screens} from '../navigation/screens';
 
@@ -27,7 +27,7 @@ const GetPasswordForm = () => {
     <View style={styles.container}>
       <View style={styles.title}>
         <Text style={styles.titleText}>FPSR ID (5 последних цифр)</Text>
-        <Icon name={'exclamation'} size={20} />
+        <IconRound name={'exclamation'} size={20} />
       </View>
       <View>
         <TextInput

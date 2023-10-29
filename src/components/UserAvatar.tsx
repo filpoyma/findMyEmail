@@ -1,13 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-import Icon from './Icon';
+import IconRound from './IconRound';
 
 const UserAvatar = ({title}: {title: string}) => {
   return (
     <View style={styles.container}>
       <View>
-        <Icon name={'emptyUser'} size={118} />
+        <IconRound name={'emptyUser'} size={118} />
       </View>
       <View>
         <Text style={styles.title}>{title}</Text>

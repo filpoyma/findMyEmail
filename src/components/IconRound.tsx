@@ -5,7 +5,7 @@ import Icons from '../asset/images/svg';
 import Badge from './Badge';
 import {IIconProps} from './interfaces';
 
-const Icon: React.FC<IIconProps> = ({
+const IconRound: React.FC<IIconProps> = ({
   name,
   size = 50,
   isNote,
@@ -32,4 +32,4 @@ const styles = (size: number, bgColor: string) =>
     },
   });
 
-export default Icon;
+export default IconRound;
