@@ -2,7 +2,7 @@ import React from 'react';
 
 import {Navigator} from './navigation/Navigator';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
-import {StyleSheet, View} from 'react-native';
+import {SafeAreaView, StyleSheet, View} from 'react-native';
 import {OverlayContext} from './reactContext';
 import {useOverlay} from './hooks/useOverlay';
 import OverlayDim from './components/OverlayDim';
@@ -26,7 +26,9 @@ const App = () => {
             isOverlayShown={isOverlayShown}
             closeOverlay={closeOverlay}
           />
-          <Navigator />
+          <SafeAreaView style={{flex: 1}}>
+            <Navigator />
+          </SafeAreaView>
         </View>
       </OverlayContext.Provider>
     </NavigationContainer>
