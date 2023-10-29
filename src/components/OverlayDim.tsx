@@ -1,16 +1,14 @@
+import React from 'react';
 import {
   Animated,
   Pressable,
   StyleSheet,
   useWindowDimensions,
 } from 'react-native';
-import React from 'react';
-import {IOverlayDimProps} from './interfaces';
+import {OverlayContext} from '../reactContext';
 
-const OverlayDim: React.FC<IOverlayDimProps> = ({
-  isOverlayShown,
-  closeOverlay,
-}) => {
+const OverlayDim: React.FC = () => {
+  const {isOverlayShown, closeOverlay} = React.useContext(OverlayContext);
   const windowDimensions = useWindowDimensions();
   const fadeAnim = React.useRef(new Animated.Value(0)).current;
   React.useEffect(() => {

@@ -17,14 +17,14 @@ export type SendPasswordScreenProps = NativeStackScreenProps<
 const SendPasswordScreen: React.FC<SendPasswordScreenProps> = ({route}) => {
   const {fpsr} = route.params;
   const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const overlayContext = React.useContext(OverlayContext);
+  const {openOverlay, closeOverlay} = React.useContext(OverlayContext);
   const showModal = () => {
-    overlayContext.openOverlay();
+    openOverlay();
     setIsModalOpen(true);
   };
   const hideModal = () => {
     setIsModalOpen(false);
-    overlayContext.closeOverlay();
+    closeOverlay();
   };
 
   return (
