@@ -18,14 +18,14 @@ const SendPasswordScreen: React.FC<SendPasswordScreenProps> = ({route}) => {
   const {fpsr} = route.params;
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const {openOverlay, closeOverlay} = React.useContext(OverlayContext);
-  const showModal = () => {
+  const showModal = React.useCallback(() => {
     openOverlay();
     setIsModalOpen(true);
-  };
-  const hideModal = () => {
-    setIsModalOpen(false);
+  }, []);
+  const hideModal = React.useCallback(() => {
     closeOverlay();
-  };
+    setIsModalOpen(false);
+  }, []);
 
   return (
     <View style={styles.container}>
