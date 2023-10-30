@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "dev": "react-native run-android && react-native run-ios --simulator=\"iPhone 14 Pro\"",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "lint": "eslint .",

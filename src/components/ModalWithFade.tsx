@@ -9,13 +9,11 @@ const ModalWithFade: React.FC<IModalBageProps> = ({
   children,
 }) => {
   return (
-    <>
-      <Modal visible={isModalOpen} transparent={true} animationType={'slide'}>
-        <TouchableWithoutFeedback onPress={hideModal}>
-          <View style={styles.modalContainerStyle}>{children}</View>
-        </TouchableWithoutFeedback>
-      </Modal>
-    </>
+    <Modal visible={isModalOpen} transparent={true} animationType={'slide'}>
+      <TouchableWithoutFeedback onPress={hideModal}>
+        <View style={styles.modalContainerStyle}>{children}</View>
+      </TouchableWithoutFeedback>
+    </Modal>
   );
 };
 
