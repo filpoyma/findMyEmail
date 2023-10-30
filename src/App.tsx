@@ -1,6 +1,6 @@
 import React from 'react';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 import {OverlayContext} from './reactContext';
 import {Navigator} from './navigation/Navigator';
 import {useOverlay} from './hooks/useOverlay';
@@ -22,6 +22,11 @@ const App = () => {
         <View style={styles.container}>
           <OverlayDim />
           <SafeAreaView style={{flex: 1}}>
+            <StatusBar
+              barStyle={'dark-content'}
+              backgroundColor={'transparent'}
+              translucent={true}
+            />
             <Navigator />
           </SafeAreaView>
         </View>
