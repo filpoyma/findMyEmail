@@ -21,7 +21,7 @@ const GetPasswordForm = () => {
     navigation.navigate(Screens.sendPassword, {
       fpsr: fpsrNumber,
     });
-  }, []);
+  }, [fpsrNumber]);
 
   return (
     <View style={styles.container}>
